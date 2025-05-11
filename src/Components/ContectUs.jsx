@@ -157,7 +157,7 @@ function ContectUs() {
                   required
                 />
                 <label htmlFor="privacy">
-                  I agree to the <a href="#">Privacy Policy</a>.
+                  I agree to the <span>Privacy Policy</span>.
                 </label>
               </div>
               <div className="btn-wrapper">
@@ -178,6 +178,7 @@ function ContectUs() {
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+          title="Descriptive title of the iframe content"
         ></iframe>
       </section>
       <Footer />

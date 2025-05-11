@@ -762,7 +762,7 @@ p {
   animation: slideIn 0.7s ease forwards;
 }
 
-.social-box a {
+.social-box span {
   color: #eb0029;
   font-size: 20px;
   transition: transform 0.3s ease;
@@ -776,7 +776,7 @@ p {
   text-decoration: none;
 }
 
-.social-box a:hover {
+.social-box span:hover {
   transform: scale(1.2);
 }
 .testamonial {

@@ -19,15 +19,15 @@ function ChefCard({ name, title, img }) {
 
       {isHovered && (
         <div className="social-box">
-          <a href="#">
+          <span>
             <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="#">
+          </span>
+          <span>
             <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#">
+          </span>
+          <span>
             <i className="fab fa-instagram"></i>
-          </a>
+          </span>
         </div>
       )}
     </div>
