@@ -22,7 +22,7 @@ function Imgbox({ items }) {
                 />
               </div>
 
-              <div className="img-content">
+              <div className="img-content ">
                 <h6>{item.h6}</h6>
                 <h4> {item.h3line1}</h4>
                 <h4>{item.h3line2} </h4>

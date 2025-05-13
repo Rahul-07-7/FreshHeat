@@ -9,9 +9,9 @@ import Footer from "./Footer";
 
 function Home() {
   return (
-    <div style={{ backgroundColor: "#F4F1EA" }}>
+    <div style={{ backgroundColor: "#F4F1EA", overflowX: "hidden" }}>
       <Nav />
-      <section>
+      <section className="home-main">
         <div className="home-img mb-5">
           <div className="home-text">
             <h2>WELCOME FRESHEAT</h2>
@@ -99,8 +99,8 @@ function Home() {
         <Mainproduct
           products={[
             {
-              img: "https://www.ex-coders.com/php-template/fresheat/assets/img/dishes/dishes1_1.png",
-              title: "Chiken Fried Rice",
+              img: "https://www.ex-coders.com/php-template/fresheat/assets/img/dishes/dishes1_5.png",
+              title: "Grilled Chicken",
               price: "199",
             },
             {
@@ -119,8 +119,8 @@ function Home() {
               price: "199",
             },
             {
-              img: "https://www.ex-coders.com/php-template/fresheat/assets/img/dishes/dishes1_5.png",
-              title: "Grilled Chicken",
+              img: "https://www.ex-coders.com/php-template/fresheat/assets/img/dishes/dishes1_1.png",
+              title: "Chiken Fried Rice",
               price: "199",
             },
           ]}
@@ -176,7 +176,7 @@ function Home() {
                 <h2>Get 30% Discount Every Item</h2>
               </div>
               <Countdown />
-              <div className="text-center">
+              <div className="text-center pb-4">
                 <Homebtn text={"Order Now"} />
               </div>
             </div>

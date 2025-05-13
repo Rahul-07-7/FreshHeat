@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import ContectUs from "./Components/ContectUs";
@@ -14,20 +14,7 @@ const RouteHandler = ({
   updateCartItemQuantity,
   clearCart,
 }) => {
-  const location = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000); // Loader duration on each route change
-    return () => clearTimeout(timer);
-  }, [location]);
-
-  return isLoading ? (
-    <Loader />
-  ) : (
+  return (
     <Routes>
       <Route path="/" element={<Home addToCart={addToCart} />} />
       <Route path="/about" element={<About />} />
@@ -60,6 +47,12 @@ const RouteHandler = ({
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const addToCart = (product) => {
     setCartItems((prev) => {
@@ -89,13 +82,17 @@ function App() {
 
   return (
     <BrowserRouter>
-      <RouteHandler
-        cartItems={cartItems}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-        updateCartItemQuantity={updateCartItemQuantity}
-        clearCart={clearCart}
-      />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <RouteHandler
+          cartItems={cartItems}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          updateCartItemQuantity={updateCartItemQuantity}
+          clearCart={clearCart}
+        />
+      )}
     </BrowserRouter>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Homebtn from "./Home-btn";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -64,15 +65,15 @@ function Footer() {
             </div>
             <div className="f-second">
               <h3>Quick Links</h3>
-              <p>
+              <Link to="/about">
                 <i class="fa-solid fa-angles-right"></i> About Us
-              </p>
-              <p>
-                <i class="fa-solid fa-angles-right"></i> Contect Us
-              </p>
-              <p>
+              </Link>
+              <Link to="/contect">
+                <i class="fa-solid fa-angles-right"></i> Contact Us
+              </Link>
+              <Link to="/menu">
                 <i class="fa-solid fa-angles-right"></i> Shop
-              </p>
+              </Link>
             </div>
             <div className="f-second">
               <h3>Our Menu</h3>
