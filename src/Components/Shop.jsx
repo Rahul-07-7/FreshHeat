@@ -3,7 +3,7 @@ import Nav from "./Nav";
 import Menu from "./Menu";
 import Footer from "./Footer";
 import products from "./Product";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Shop({ cartItems, addToCart, removeFromCart }) {
   const navigate = useNavigate();
@@ -14,6 +14,17 @@ function Shop({ cartItems, addToCart, removeFromCart }) {
   const [filtered, setFiltered] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 10;
+
+  const location = useLocation();
+
+  // Extract category from query params
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const catFromURL = params.get("category");
+    if (catFromURL) {
+      setCategory(catFromURL);
+    }
+  }, [location.search]);
 
   useEffect(() => {
     let result = products;
@@ -91,25 +102,31 @@ function Shop({ cartItems, addToCart, removeFromCart }) {
               </div>
             </div>
 
-            <div className="search-box mt-5">
+            <div className="search-box mt-5 ">
               <h3>Category</h3>
               <div className="spans">
-                {["All", "chicken", "chinese", "drinks", "Panjabi"].map(
-                  (cat) => (
-                    <span
-                      key={cat}
-                      className={category === cat ? "active" : ""}
-                      style={{ cursor: "pointer", marginRight: "10px" }}
-                      onClick={() => setCategory(cat)}
-                    >
-                      {cat}
-                    </span>
-                  )
-                )}
+                {[
+                  "All",
+                  "Burger",
+                  "Pizza",
+                  "chicken",
+                  "chinese",
+                  "drinks",
+                  "Panjabi",
+                ].map((cat) => (
+                  <span
+                    key={cat}
+                    className={category === cat ? "active" : ""}
+                    style={{ cursor: "pointer", marginRight: "10px" }}
+                    onClick={() => setCategory(cat)}
+                  >
+                    {cat}
+                  </span>
+                ))}
               </div>
             </div>
 
-            <div className="search-box mt-5">
+            <div className="search-box mt-5 mb-4">
               <div className="price-filter">
                 <h3>Filter By Price</h3>
                 <input

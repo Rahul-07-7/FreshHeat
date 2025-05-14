@@ -77,15 +77,12 @@ function Footer() {
             </div>
             <div className="f-second">
               <h3>Our Menu</h3>
-              <p>
-                <i class="fa-solid fa-angles-right"></i> Burger King
-              </p>
-              <p>
-                <i class="fa-solid fa-angles-right"></i> Pizaa King
-              </p>
-              <p>
-                <i class="fa-solid fa-angles-right"></i> Desserts
-              </p>
+              <Link to="/menu?category=Burger">
+                <i className="fa-solid fa-angles-right"></i> Burger King
+              </Link>
+              <Link to="/menu?category=Pizza">
+                <i className="fa-solid fa-angles-right"></i> Pizaa King
+              </Link>
             </div>
             <div className="f-third">
               <p style={{ fontSize: "20px", color: "gray" }}>

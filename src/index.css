@@ -939,6 +939,7 @@ iframe {
   background-color: #ffffff;
   height: auto;
   padding: 20px;
+  width: 100%;
 }
 .search-box h3 {
   padding-bottom: 10px;
