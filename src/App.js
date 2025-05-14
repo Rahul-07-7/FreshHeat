@@ -6,6 +6,7 @@ import ContectUs from "./Components/ContectUs";
 import Shop from "./Components/Shop";
 import Cart from "./Components/Cart";
 import Loader from "./Components/Loader";
+import ScrollToTop from "./Components/Scrolltotop";
 
 const RouteHandler = ({
   cartItems,
@@ -82,6 +83,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       {isLoading ? (
         <Loader />
       ) : (
