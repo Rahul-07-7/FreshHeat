@@ -24,7 +24,7 @@ function Footer() {
               <div className="f-text">
                 <h6>send email</h6>
                 <a href="mailto:rahuljogadiya007@gmail.com">
-                  rahuljogadiya007@gmail.com
+                  rahul007@gmail.com
                 </a>
               </div>
             </div>

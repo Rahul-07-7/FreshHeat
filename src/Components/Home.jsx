@@ -127,18 +127,20 @@ function Home() {
         />
       </section>
       <section>
-        <div className="home-pizza">
-          <div className="pizaa-content">
-            <h5>WELCOME FRESHEAT</h5>
-            <h1>TODAY SPACIAL FOOD</h1>
-            <h6>limits Time Offer</h6>
-            <Homebtn text={"Order Now"} />
-          </div>
-          <div className="pizaa-img">
-            <img
-              src="https://www.ex-coders.com/php-template/fresheat/assets/img/cta/ctaThumb1_1.png"
-              alt=""
-            />
+        <div className="container">
+          <div className="home-pizza">
+            <div className="pizaa-content">
+              <h5>WELCOME FRESHEAT</h5>
+              <h1>TODAY SPACIAL FOOD</h1>
+              <h6>limits Time Offer</h6>
+              <Homebtn text={"Order Now"} />
+            </div>
+            <div className="pizaa-img">
+              <img
+                src="https://www.ex-coders.com/php-template/fresheat/assets/img/cta/ctaThumb1_1.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </section>

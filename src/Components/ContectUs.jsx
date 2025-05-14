@@ -90,83 +90,85 @@ function ContectUs() {
         </div>
       </section>
       <section>
-        <div className="contect">
-          <div>
-            <img
-              src="https://www.ex-coders.com/php-template/fresheat/assets/img/contact/contactThumb2_1.png"
-              alt=""
-            />
-          </div>
-          <div className="main-form">
-            <h1>Get In Touch</h1>
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <input
-                  type="text"
-                  name="fullname"
-                  placeholder="Full Name"
-                  value={formData.fullname}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-row">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  pattern="[0-9]{10,15}"
-                  title="Enter a valid phone number"
-                  required
-                />
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-row full">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-              <div className="form-rows checkbox-row">
-                <input
-                  type="checkbox"
-                  id="privacy"
-                  name="privacy"
-                  checked={formData.privacy}
-                  onChange={handleChange}
-                  required
-                />
-                <label htmlFor="privacy">
-                  I agree to the <span>Privacy Policy</span>.
-                </label>
-              </div>
-              <div className="btn-wrapper">
-                <Homebtn text={"Submit Now"} className="full-width-btn" />
-              </div>
-              {successMessage && (
-                <p className="success-message">{successMessage}</p>
-              )}
-            </form>
+        <div className="container">
+          <div className="contect">
+            <div>
+              <img
+                src="https://www.ex-coders.com/php-template/fresheat/assets/img/contact/contactThumb2_1.png"
+                alt=""
+              />
+            </div>
+            <div className="main-form">
+              <h1>Get In Touch</h1>
+              <form className="contact-form" onSubmit={handleSubmit}>
+                <div className="form-row">
+                  <input
+                    type="text"
+                    name="fullname"
+                    placeholder="Full Name"
+                    value={formData.fullname}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-row">
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    pattern="[0-9]{10,15}"
+                    title="Enter a valid phone number"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-row full">
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+                </div>
+                <div className="form-rows checkbox-row">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    checked={formData.privacy}
+                    onChange={handleChange}
+                    required
+                  />
+                  <label htmlFor="privacy">
+                    I agree to the <span>Privacy Policy</span>.
+                  </label>
+                </div>
+                <div className="btn-wrapper">
+                  <Homebtn text={"Submit Now"} className="full-width-btn" />
+                </div>
+                {successMessage && (
+                  <p className="success-message">{successMessage}</p>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </section>
